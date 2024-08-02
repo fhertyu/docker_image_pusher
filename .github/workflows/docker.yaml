@@ -110,7 +110,7 @@ jobs:
             docker pull $line
             platform=$(echo "$line" | awk -F'--platform[ =]' '{if (NF>1) print $2}' | awk '{print $1}')
             echo "platform is $platform"
-            arch=amd64
+            
             # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
             image=$(echo "$line" | awk '{print $NF}')
 
@@ -129,12 +129,12 @@ jobs:
                   name_space_prefix="${name_space}_"
                fi
             fi
-            
+            $arch=amd64
             if [ $platform == linux/arm/v7 ];then
-                arch=armv7
+                $arch=armv7
             fi
             if [ $platform == linux/arm64 ];then
-                arch=arm64
+                $arch=arm64
             fi
             # 将@sha256:等字符删除
             image_name_tag="${image_name_tag%%@*}"
