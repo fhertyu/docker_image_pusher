@@ -16,7 +16,7 @@ jobs:
 
   build:
     name: Pull
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
     - name: Before freeing up disk space
       run: |
@@ -149,6 +149,7 @@ jobs:
     - name: Create branch and commit Docker image
       run: |
         # Clean and transform the docker image name to a valid branch name
+        apt install git
         branch_name=$(echo "$img" | tr ':/. ' '-')
         git checkout --orphan "$branch_name"
         git rm -rf .
