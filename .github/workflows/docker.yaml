@@ -110,7 +110,7 @@ jobs:
             docker pull $line
             platform=$(echo "$line" | awk -F'--platform[ =]' '{if (NF>1) print $2}' | awk '{print $1}')
             echo "platform is $platform"
-
+            $arch=amd64
             # 获取镜像的完整名称，例如kasmweb/nginx:1.25.3（命名空间/镜像名:版本号）
             image=$(echo "$line" | awk '{print $NF}')
 
@@ -134,7 +134,6 @@ jobs:
             image_name_tag="${image_name_tag%%@*}"
             new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$name_space_prefix$image_name_tag"
             echo "docker tag $image $new_image"
-            $arch=amd64
             docker tag $image $new_image-$arch
             echo "docker push $new_image"
             docker push $new_image
