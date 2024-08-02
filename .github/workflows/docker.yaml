@@ -145,7 +145,6 @@ jobs:
        
     - name: Save Docker image to tar file
       run: docker save -o image.tar $image 
-      
     - name: Create branch and commit Docker image
       run: |
             # Clean and transform the docker image name to a valid branch name
