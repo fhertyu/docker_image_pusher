@@ -134,6 +134,7 @@ jobs:
             image_name_tag="${image_name_tag%%@*}"
             new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$name_space_prefix$image_name_tag"
             echo "docker tag $image $new_image"
+            echo $platform |   tr "/" "-"
             docker tag $image $new_image:$arch
             echo "docker push $new_image"
             docker push $new_image
