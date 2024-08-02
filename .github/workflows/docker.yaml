@@ -135,10 +135,6 @@ jobs:
             new_image="$ALIYUN_REGISTRY/$ALIYUN_NAME_SPACE/$name_space_prefix$image_name_tag"
             echo "docker tag $image $new_image"
             $arch=amd64
-            if [ "$platform == linux/arm64" ];then
-              $arch=arm64
-            if [ "$platform == linux/arm/v7" ];then
-              $arch=armv7
             docker tag $image $new_image-$arch
             echo "docker push $new_image"
             docker push $new_image
