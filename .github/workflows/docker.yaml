@@ -141,23 +141,7 @@ jobs:
             echo "docker tag $image $new_image"
             docker tag $image $new_image
             echo "docker push $new_image"
-            docker push $new_image
-       
-    - name: Save Docker image to tar file
-      run: docker save -o image.tar $image 
-    - name: Create branch and commit Docker image
-      run: |
-            # Clean and transform the docker image name to a valid branch name
-            apt install git
-            branch_name=$(echo "$img" | tr ':/. ' '-')
-            git checkout --orphan "$branch_name"
-            git rm -rf .
-            mv image.tar "$branch_name.tar"
-            git add .gitattributes
-            git add "$branch_name.tar"
-            git commit -m "Add Docker image $image "
-            git push "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" "$branch_name" --force        
-            
+            docker push $new_image 
             echo "开始清理磁盘空间"
             echo "=============================================================================="
             df -hT
