@@ -129,7 +129,7 @@ jobs:
                   name_space_prefix="${name_space}_"
                fi
             fi
-            $arch=amd64
+            arch=amd64
             if [ $platform == linux/arm/v7 ];then
                 arch=armv7
             fi
