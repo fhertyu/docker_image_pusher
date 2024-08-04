@@ -1,4 +1,4 @@
 #支持指定架构
---platform=linux/amd64 liwei2633/gopeed:v1.5.7
---platform=linux/arm64 liwei2633/gopeed:v1.5.7
---platform=linux/arm/v7 liwei2633/gopeed:v1.5.7
+--platform=linux/amd64 whyour/qinglong:2.17.8
+--platform=linux/arm64 whyour/qinglong:2.17.8
+--platform=linux/arm/v7 whyour/qinglong:2.17.8
