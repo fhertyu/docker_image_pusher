@@ -1,4 +1,4 @@
 #支持指定架构
---platform=linux/amd64 whyour/qinglong:2.17.8
---platform=linux/arm64 whyour/qinglong:2.17.8
---platform=linux/arm/v7 whyour/qinglong:2.17.8
+--platform=linux/amd64 6053537/portainer-ce:latest
+--platform=linux/arm64 6053537/portainer-ce:latest
+--platform=linux/arm/v7 6053537/portainer-ce:latest
