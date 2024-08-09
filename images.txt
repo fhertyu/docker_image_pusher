@@ -1,5 +1,8 @@
 #支持指定架构
---platform=linux/amd64 jeessy/ddns-go:v6.6.7
---platform=linux/arm64 jeessy/ddns-go:v6.6.7
---platform=linux/arm/v7 jeessy/ddns-go:v6.6.7
+--platform=linux/amd64 louislam/uptime-kuma:base2-slim
+
+--platform=linux/arm64 louislam/uptime-kuma:base2-slim
+
+--platform=linux/arm/v7 louislam/uptime-kuma:base2-slim
+
 
