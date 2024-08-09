@@ -1,8 +1,4 @@
 #支持指定架构
---platform=linux/amd64 louislam/uptime-kuma:base2-slim
-
---platform=linux/arm64 louislam/uptime-kuma:base2-slim
-
---platform=linux/arm/v7 louislam/uptime-kuma:base2-slim
-
-
+--platform=linux/amd64 chishin/nginx-proxy-manager-zh:2.11
+--platform=linux/arm64 chishin/nginx-proxy-manager-zh:2.11
+--platform=linux/arm/v7 chishin/nginx-proxy-manager-zh:2.11
