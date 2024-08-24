@@ -1,7 +1,4 @@
 #支持指定架构
---platform=linux/amd64 packetstream/psclient:latest
+--platform=linux/amd64 benweet/stackedit:latest
 
---platform=linux/arm64 packetstream/psclient:latest
-
---platform=linux/arm/v7 packetstream/psclient:latest
 
