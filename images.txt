@@ -1,4 +1,5 @@
 #支持指定架构
---platform=linux/amd64 benweet/stackedit:latest
-
+--platform=linux/amd64 vx3r/wg-gen-web:latest
+--platform=linux/arm64 vx3r/wg-gen-web:latest
+--platform=linux/armv/v7 vx3r/wg-gen-web:latest
 
